@@ -296,7 +296,7 @@ def _query_view(template, table=None):
         ordering = None
 
     if table:
-        default_sql = 'SELECT * FROM "%s"' % table
+        default_sql = 'SELECT message FROM "%s" WHERE user_id = ' % table
         model_class = dataset[table].model_class
     else:
         default_sql = ''
